@@ -14,8 +14,8 @@ import lombok.Setter;
 @Table(name="employees")
 public class Employee {
    @Id
-   @GeneratedValue
-    private long id;
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
    @Column(name="first_name")
     private String firstname;
     @Column(name="last_name")
